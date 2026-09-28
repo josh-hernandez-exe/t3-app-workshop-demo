@@ -1,0 +1,15 @@
+{
+  "name": "cs-workshop-bootstrap",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "init": "create-t3-app",
+    "check": "create-t3-app --version"
+  },
+  "engines": {
+    "node": "22.x"
+  },
+  "devDependencies": {
+    "create-t3-app": "7.40.0"
+  }
+}

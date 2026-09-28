@@ -1,0 +1,15 @@
+{
+  "name": "Cloud workshop: ready to initialize T3",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:1-22-bookworm",
+  "forwardPorts": [3000],
+  "portsAttributes": {
+    "3000": { "label": "Student T3 app", "onAutoForward": "notify" }
+  },
+  "postCreateCommand": "npm ci && npm run check",
+  "waitFor": "postCreateCommand",
+  "customizations": {
+    "vscode": {
+      "extensions": ["Prisma.prisma", "dbaeumer.vscode-eslint", "bradlc.vscode-tailwindcss"]
+    }
+  }
+}
