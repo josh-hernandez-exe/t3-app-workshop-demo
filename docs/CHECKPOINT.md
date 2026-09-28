@@ -1,13 +1,18 @@
-# Starting Point: main
+# Step 1: Generate the App
 
-This is the pre-workshop toolbox. No T3 application has been generated or installed.
+Branch: `workshop/step-01-generate-app`.
 
-1. Follow [Setup](SETUP.md) in this repository's root folder.
-2. Confirm `node --version` reports `v22.x` and `npm run check` reports `7.40.0`.
-3. Stop before generating `my-app/`. Begin [workshop step 1](WORKSHOP.md#1-generate-the-app)
-   when Josh starts the guided lab.
+The interactive wizard has created `my-app/` with TypeScript, Tailwind, tRPC, NextAuth,
+Prisma, App Router, SQLite, ESLint/Prettier, and the `~/` alias. The app's dependencies
+have not been installed. The application README points back to the workshop guides.
 
-Installing the toolbox downloads the generator only. There is no sign-in configuration,
-database, application code, or running server on this branch.
+1. Open `my-app/` and find `src/`, `prisma/`, and its `package.json`.
+2. Do not run the generator again in this copy. Do not install the original package versions.
+3. Continue with [step 2: install the reviewed versions](WORKSHOP.md#2-install-the-reviewed-versions).
 
-See the [branch map](README.md#match-the-slides-to-a-checkpoint) for the later checkpoints.
+There is no database, sign-in session, or running server yet. A fresh clone has no private
+`.env`; use the [checkpoint recovery instructions](README.md#use-a-checkpoint-safely)
+when you reach sign-in setup. Never commit your environment file.
+
+This checkpoint matches **Step 1: Create the App Yourself** and **The Wizard: In This Order**
+in the slides. Read the [branch map](README.md#match-the-slides-to-a-checkpoint) for all steps.
