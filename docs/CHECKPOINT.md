@@ -1,18 +1,24 @@
-# Step 1: Generate the App
+# Step 2: Install the Reviewed Dependencies
 
-Branch: `workshop/step-01-generate-app`.
+Branch: `workshop/step-02-install-dependencies`.
 
-The interactive wizard has created `my-app/` with TypeScript, Tailwind, tRPC, NextAuth,
-Prisma, App Router, SQLite, ESLint/Prettier, and the `~/` alias. The app's dependencies
-have not been installed. The application README points back to the workshop guides.
+The generated app now has the reviewed NextAuth version, dependency overrides, and an
+npm lockfile. No application behavior has changed. Installed packages and Prisma's
+generated client stay on your computer, not in Git.
 
-1. Open `my-app/` and find `src/`, `prisma/`, and its `package.json`.
-2. Do not run the generator again in this copy. Do not install the original package versions.
-3. Continue with [step 2: install the reviewed versions](WORKSHOP.md#2-install-the-reviewed-versions).
+In a fresh clone, install the recorded versions from the toolbox folder:
 
-There is no database, sign-in session, or running server yet. A fresh clone has no private
-`.env`; use the [checkpoint recovery instructions](README.md#use-a-checkpoint-safely)
-when you reach sign-in setup. Never commit your environment file.
+```sh
+cd my-app
+npm ci
+npm audit
+```
 
-This checkpoint matches **Step 1: Create the App Yourself** and **The Wizard: In This Order**
-in the slides. Read the [branch map](README.md#match-the-slides-to-a-checkpoint) for all steps.
+Expect Prisma to generate its client and the audit to report no known vulnerabilities
+for the reviewed lockfile. Ask Josh about any new finding; do not use `audit fix --force`.
+
+There is no configured sign-in, database, or running server yet. Continue with
+[step 3: connect sign-in](WORKSHOP.md#3-connect-sign-in). For a fresh clone, first follow
+the [private environment instructions](README.md#use-a-checkpoint-safely).
+
+This checkpoint matches **Step 2: Install in the App Folder** in the slides.

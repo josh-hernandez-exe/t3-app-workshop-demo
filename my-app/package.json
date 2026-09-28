@@ -29,7 +29,7 @@
     "@trpc/react-query": "^11.0.0",
     "@trpc/server": "^11.0.0",
     "next": "^15.2.3",
-    "next-auth": "5.0.0-beta.25",
+    "next-auth": "5.0.0-beta.32",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "server-only": "^0.0.1",
@@ -55,5 +55,13 @@
   "ct3aMetadata": {
     "initVersion": "7.40.0"
   },
-  "packageManager": "npm@10.9.9"
+  "packageManager": "npm@10.9.9",
+  "overrides": {
+    "@prisma/config": {
+      "deepmerge-ts": "8.0.2"
+    },
+    "next": {
+      "postcss": "8.5.28"
+    }
+  }
 }
