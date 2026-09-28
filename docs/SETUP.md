@@ -1,7 +1,7 @@
 # Before the Workshop: Choose One Environment
 
 This is preparation, not the workshop itself. Stop when Create T3 App reports `7.40.0`.
-Do not generate `my-app` before the session. The [main walkthrough](README.md) starts there.
+Do not generate `my-app` before the session. The [main walkthrough](WORKSHOP.md) starts there.
 
 ## Pick a Route
 
@@ -22,9 +22,12 @@ not start the app by itself. A container supplies these tools in a consistent en
 
 ## Get Your Own Copy
 
-Open the organizer's public template link. In GitHub, choose **Use this template > Create
-a new repository**, give it a name such as `cs-workshop`, and choose **Private** for practice.
-Use that new repository for the instructions below.
+Open <https://github.com/josh-hernandez-exe/t3-app-workshop-demo>. Check that the branch
+selector says **main**. Choose **Use this template > Create a new repository**, give it a
+name such as `cs-workshop`, and choose **Private** for practice. Leave **Include all branches**
+unchecked: you want the blank starting point, not all the reference apps.
+Use that new repository for the instructions below. If the template button is unavailable,
+ask Josh or use the local clone route; do not start on a checkpoint branch by accident.
 
 This creates your own copy, not a fork. A GitHub fork of a public repository cannot simply
 be made private. A private template-created repository is the appropriate rehearsal route.
@@ -59,7 +62,7 @@ access check. GitHub port access and your application's sign-in are two separate
    Use Node 22 for the shared path; do not choose an unrelated newer major during the session.
 2. Copy the repository's HTTPS URL from **Code** on GitHub. In VS Code's Command Palette,
    run **Git: Clone**, paste the URL, choose a location, and open the cloned folder.
-3. Confirm the Explorer shows the toolbox's `package.json`, `README.md`, and `.devcontainer`.
+3. Confirm the Explorer shows the toolbox's `package.json`, `README.md`, `docs/`, and `.devcontainer`.
    You should have this toolbox open, not the whole teaching repository or your home folder.
 4. Open **Terminal > New Terminal**. If you installed Node after opening VS Code, restart
    VS Code first so the terminal can find it.
@@ -195,7 +198,7 @@ trust settings. `bun install` can run project scripts and download Prisma engine
 
 All setup routes write local files and download packages. No route provisions a database
 service, initializes the student app automatically, or creates cloud accounts for you.
-Return to the [main walkthrough](README.md) when the generator is ready.
+Return to the [main walkthrough](WORKSHOP.md) when the generator is ready.
 
 ## Optional: Google Instead of Discord
 
@@ -218,4 +221,4 @@ both providers just to follow the lab; Discord is the group walkthrough.
 
 If asked for a JavaScript origin, use the base address without the callback path.
 Organization policies may block consent. Pair with a working setup instead of disabling
-security checks. Rejoin at [Open the Page](README.md#4-open-the-page).
+security checks. Rejoin at [Open the Page](WORKSHOP.md#4-open-the-page).

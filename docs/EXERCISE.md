@@ -1,8 +1,9 @@
 # Optional Next Steps: Make the Project Yours
 
-First finish the [core setup](README.md#5-save-reload-restart): sign in, save, reload, and restart.
+First finish the [core setup](WORKSHOP.md#5-save-reload-restart): sign in, save, reload, and restart.
 Then choose one task below based on your comfort level. You are not expected to finish all
-of these during the workshop. No exercise implementation is prebuilt in the toolbox.
+of these during the workshop. No exercise implementation is prebuilt in the toolbox or
+the `workshop/step-06-final` checkpoint.
 
 Work in the generated `my-app/` folder. npm commands are shown; use `yarn run` or `bun run`
 for the same scripts if that is the package manager you chose.

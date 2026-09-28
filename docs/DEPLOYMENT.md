@@ -8,7 +8,7 @@ This is a follow-up exercise, not a required task in the one-hour lab. Finish si
 saving, and persistence first. In the room Josh may show a prepared deployment, not ask
 everyone to migrate a database in the final few minutes.
 
-**Before public deployment:** complete the [reviewed pre-install step](README.md#2-install-the-reviewed-versions)
+**Before public deployment:** complete the [reviewed pre-install step](WORKSHOP.md#2-install-the-reviewed-versions)
 and recheck your chosen package manager's audit. The unmodified scaffold has older packages
 with known advisories. The September 24 npm rehearsal cleared those findings after the
 documented settings, but that is not a production security guarantee. Rehearse real provider
@@ -18,7 +18,7 @@ sign-in and ownership; never use `audit fix --force` as a shortcut.
 
 1. Commit your generated application and its lockfile to your own repository. If the app is
    still nested in this toolbox, Vercel's Root Directory must be `my-app`, not `.`.
-2. Confirm `.env`, database files, `node_modules`, and `.next` are not tracked.
+2. Confirm `.env`, database files, `node_modules`, `.next`, and `generated/prisma` are not tracked.
 3. Inside the app, run `npm run check` and audit its dependencies. Complete sign-in,
    ownership, persistence, validation, and failure-feedback checks.
 4. Do not commit `.env.production` or paste database URLs into shell commands or chat.
