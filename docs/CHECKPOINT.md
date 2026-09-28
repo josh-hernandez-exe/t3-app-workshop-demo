@@ -1,24 +1,23 @@
-# Step 2: Install the Reviewed Dependencies
+# Step 3: Connect Sign-In
 
-Branch: `workshop/step-02-install-dependencies`.
+Branch: `workshop/step-03-connect-auth`.
 
-The generated app now has the reviewed NextAuth version, dependency overrides, and an
-npm lockfile. No application behavior has changed. Installed packages and Prisma's
-generated client stay on your computer, not in Git.
+The non-secret `.env.example` now includes the local `AUTH_URL`. The generated Discord
+provider and Prisma adapter already supply the sign-in code, so no auth code changes
+are needed for the shared workshop path.
 
-In a fresh clone, install the recorded versions from the toolbox folder:
+1. In a fresh clone, run `npm ci` inside `my-app/`.
+2. Follow the [private environment instructions](README.md#use-a-checkpoint-safely) if
+	`my-app/.env` is missing. Generate your own `AUTH_SECRET`; keep an existing generated one.
+3. Complete [step 3](WORKSHOP.md#3-connect-sign-in): use your own Discord application,
+	enter its client ID and secret privately, and register the exact callback URL.
+4. Set `AUTH_URL` to your real browser origin. The example's localhost address must change
+	for Codespaces or a different local port. Save `.env` without committing it.
 
-```sh
-cd my-app
-npm ci
-npm audit
-```
+**Ready check:** your callback is saved and the private variables are filled in. A branch
+cannot perform those account actions or prove that OAuth succeeds.
 
-Expect Prisma to generate its client and the audit to report no known vulnerabilities
-for the reviewed lockfile. Ask Josh about any new finding; do not use `audit fix --force`.
+No database has been created yet. Continue with [step 4: open the page](WORKSHOP.md#4-open-the-page).
 
-There is no configured sign-in, database, or running server yet. Continue with
-[step 3: connect sign-in](WORKSHOP.md#3-connect-sign-in). For a fresh clone, first follow
-the [private environment instructions](README.md#use-a-checkpoint-safely).
-
-This checkpoint matches **Step 2: Install in the App Folder** in the slides.
+This checkpoint matches both **Step 3** slides: **Choose the Return Address** and
+**Connect Discord Sign-In**. Working provider credentials are never supplied by a checkpoint.
